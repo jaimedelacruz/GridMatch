@@ -83,3 +83,14 @@ if __name__ == "__main__":
     ax[0].set_title('x-axis distorsion matrix')
     ax[1].set_title('y-axis distorsion matrix')
     f.set_tight_layout(True)
+
+
+    # You can algo generate the big matrix and just apply it by hand
+    
+    nt, ny, nx = cub.shape
+    corMat = GM.StretchMatrix(ny, nx, cor[0], nthreads=nthreads, bare=False)
+    img1 = GM. bilint_fast2D(cub[0], corMat[1], corMat[0], nthreads=nthreads)
+
+    # show the difference between applying the correction with Stretch or by using the matrix directly
+    f, ax = plt.subplots(nrows=1, ncols=1, figsize=(8,8))
+    plt.imshow(img1-img)

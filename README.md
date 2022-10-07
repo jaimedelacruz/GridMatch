@@ -15,6 +15,7 @@ These routines make use of Numpy and Numba. They can be used without Numba by co
 ## Usage
 We have included example code showing how to use every function, please check the example.py file in the example folder.
 
+The library itself is GridMatch.py, you should copy that file to your library (indicated by PYTHONPATH) or to the folder where you are working.
 
 ## Acknowledgements
 I greatefully acknowledge funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (SUNMAG, grant agreement 759548).

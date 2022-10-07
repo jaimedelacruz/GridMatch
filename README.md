@@ -13,7 +13,7 @@ These routines make use of Numpy and Numba. They can be used without Numba by co
 
 
 ## Usage
-We have included example code showing how to use every function, please check the examply.py file in the example folder.
+We have included example code showing how to use every function, please check the example.py file in the example folder.
 
 
 ## Acknowledgements

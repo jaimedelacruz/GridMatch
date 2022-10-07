@@ -1,9 +1,7 @@
 # GridMatch
 A tool for rubber-sheet distorsion removal in python. These routines can be used to:
 1) remove seeing distorsions from a burst of images where the object does not evolve
-
 2) remove redisual seeing distorsions of a time series, where the object is eveolving.
-
 3) to morph one image into another assuming that they are relatively similar.
 
 These tools are a python port of the tools originally developed in ANA/C by R. A. Shine (LMSAL).

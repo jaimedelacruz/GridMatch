@@ -17,4 +17,4 @@ We have included example code showing how to use every function, please check th
 
 
 ## Acknowledgements
-I greatefulyl acknowledge funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (SUNMAG, grant agreement 759548).
+I greatefully acknowledge funding from the European Research Council (ERC) under the European Union's Horizon 2020 research and innovation programme (SUNMAG, grant agreement 759548).

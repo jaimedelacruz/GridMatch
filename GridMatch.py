@@ -835,18 +835,24 @@ def _Smooth(var, win):
 
     N = var.size
 
+    
+    padded = np.zeros((N+2*win2), dtype='float64')
+    
+    padded[0:win2] = var[0]
+    padded[win2:win2+N] = var
+    padded[win2+N::] = var[-1]
+    norm = float(2*win2+1)
+    
     res = np.zeros(N, dtype='float64')
 
     for ii in range(N):
-        j0 = max(0, ii-win2)
-        j1 = min(ii+win2,N)
-
         suma = 0.0
-        for jj in range(j0,j1):
-            suma += var[jj]
+        
+        for jj in range(ii-win2,ii+win2+1):
+            suma += padded[jj+win2]
 
-        res[ii] = suma / max((j1-j0), 1)
-
+        res[ii] = suma / norm
+        
     return res
     
     
@@ -950,7 +956,7 @@ def destretch_tseries(cub, platescale, tiles, clips, tstep, nthreads=4, apply_co
 
 
     # Detrend and unsharp mask the displacements
-    #delta = _GridPrep(delta, tstep)
+    delta = _GridPrep(delta, tstep)
 
     # correct cube?
     if(apply_correction):
